@@ -8,15 +8,19 @@
     --fondo-gris-transparente: #d4d4d4ea;
     --borde: #333 1px solid
 }
+/*Reseteo de paddings y de margenes*/
 *{
     padding: 0;
     margin: 0;
 }
+
+/*Configuracion del body*/
 body{
     background-color: #f6f6f6;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/*Configuracion del header*/
 header{
     background-color: var(--fondo-azul);
     color: var(--letra-blanca);
@@ -30,6 +34,8 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+/*Configuracion del menu principal*/
 nav{
     background-color: var(--fondo-azul-menu);
     grid-area: my-aside;
@@ -44,6 +50,9 @@ nav div{
     text-decoration: none;
     padding: 5px;
 }
+
+/*Media queris para la compativilidad de la web con ordenadores tablets y moviles*/
+
 /* PC */
 @media screen and (min-width:1024px) {
     body{
@@ -62,9 +71,9 @@ nav div{
     nav div {        
         display: flex;
         flex-direction: column;
-    }
-    
+    } 
 }
+
 /* tablet */
 @media screen and (max-width:1023px) {
     body{
@@ -91,6 +100,7 @@ nav div{
         justify-content: space-around;
     }
 }
+
 /* movil */
 @media screen and (max-width:650px) {
     body{
@@ -119,10 +129,14 @@ nav div{
         font-size: 0,8rem;
     }
 }
+
+/*Configuracion del main*/
 main{
     grid-area: my-main;
     padding: 10px;
 }
+
+/*Configuracion de las secciones*/
 section{
     background-color: var(--fondo-gris);
     border: var(--borde);
@@ -132,6 +146,8 @@ section{
     border-radius: 5px;
     padding: 1rem;
 }
+
+/*Seccion de hero*/
 #noticia{
     background-image: url(img/fondo-noticia.jpg);
 }
@@ -139,7 +155,18 @@ section{
     background-color: var(--fondo-gris-transparente);
     border-radius: 5px;
     padding: 5px;
+    width: 100%;
 }
+.content-noticia div{
+    width: 100%;
+    text-align: center;
+}
+.content-noticia img {
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/*Seccion de proyectos*/
 .mis_proyectos{
     display: flex;
     justify-content: space-around;
@@ -152,6 +179,8 @@ section{
     max-width: 450px;
     margin: 5px;
 }
+
+/*Configuracion footer*/
 footer{
     background-color: var(--fondo-gris-oscuro);
     text-align: center;
