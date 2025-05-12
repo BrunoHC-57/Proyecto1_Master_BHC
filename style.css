@@ -1,6 +1,7 @@
 
 :root{
     --fondo-azul: #265db6;
+    --fondo-azul-menu: #7eb0ff;
     --fondo-gris: #d4d4d4;
     --fondo-gris-oscuro: #bfbfbf;
     --letra-blanca: #f3f3f3;
@@ -14,14 +15,6 @@
 body{
     background-color: #f6f6f6;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    grid-template-rows: 100px 1fr 30px;
-    grid-template-areas: 
-    "my-header my-header my-header"
-    "my-aside my-main my-main"
-    "my-footer my-footer my-footer"
-    ;
 }
 
 header{
@@ -31,44 +24,108 @@ header{
     text-align: center;
     grid-area: my-header;
     width: 100%;
+    height: 100px;
     position: fixed;
-    top: 0
+    top: 0;
+    justify-content: center;
+    align-items: center;
 }
 nav{
-    background-color: var(--fondo-gris-oscuro);
+    background-color: var(--fondo-azul-menu);
     grid-area: my-aside;
-    display: flex;
-    flex-direction: column;
-    border: var(--borde);
+    border-right: var(--borde);
 }
 nav a{
     color: black;
     text-decoration: none;
+}
+nav div{
+    color: black;
+    text-decoration: none;
     padding: 5px;
 }
-
-@media screen and (max-width:650px) {
+/* PC */
+@media screen and (min-width:1024px) {
     body{
         display: grid;
         grid-template-columns: 150px 1fr 150px;
-        grid-template-rows: 100px 25px 1fr 30px;
+        grid-template-rows: 100px 1fr 20px;
+        grid-template-areas: 
+        "my-header my-header my-header"
+        "my-aside my-main my-main"
+        "my-footer my-footer my-footer";
+    }
+    
+    nav{
+        border-bottom: var(--borde);
+    }
+    nav div {        
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+/* tablet */
+@media screen and (max-width:1023px) {
+    body{
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-rows: 70px 25px 1fr 20px;
         grid-template-areas: 
         "my-header my-header my-header"
         "my-aside my-aside my-aside"
         "my-main my-main my-main"
         "my-footer my-footer my-footer";
     }
+    header{
+        font-size: 25px;
+        height: 70px;
+        justify-content: center;
+    }
     nav{
+        border-bottom: var(--borde);
+    }
+    nav div {        
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
-    
+}
+/* movil */
+@media screen and (max-width:650px) {
+    body{
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-rows: 50px 25px 1fr 20px;
+        grid-template-areas: 
+        "my-header my-header my-header"
+        "my-aside my-aside my-aside"
+        "my-main my-main my-main"
+        "my-footer my-footer my-footer";
+    }
+    header{
+        font-size: 20px;
+        height: 50px;
+        justify-content: center;
+    }
+    nav{
+        border-bottom: var(--borde);
+        
+    }
+    nav div {        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 0,8rem;
+    }
 }
 main{
     grid-area: my-main;
+    padding: 10px;
 }
 section{
     background-color: var(--fondo-gris);
+    border: var(--borde);
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 1rem;
@@ -96,12 +153,14 @@ section{
     margin: 5px;
 }
 footer{
-    background-color: var(--fondo-gris);
+    background-color: var(--fondo-gris-oscuro);
     text-align: center;
-    margin-top: 10px;
     font-size: 0.75rem;  
     padding: 2px;
     grid-area: my-footer;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 footer a{
     color: black;
