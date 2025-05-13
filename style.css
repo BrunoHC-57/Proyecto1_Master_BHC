@@ -18,37 +18,7 @@
 body{
     background-color: #f6f6f6;
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-/*Configuracion del header*/
-header{
-    background-color: var(--fondo-azul);
-    color: var(--letra-blanca);
-    font-size: 40px;
-    text-align: center;
-    grid-area: my-header;
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    justify-content: center;
-    align-items: center;
-}
-
-/*Configuracion del menu principal*/
-nav{
-    background-color: var(--fondo-azul-menu);
-    grid-area: my-aside;
-    border-right: var(--borde);
-}
-nav a{
-    color: black;
-    text-decoration: none;
-}
-nav div{
-    color: black;
-    text-decoration: none;
-    padding: 5px;
+    min-width: 360px;
 }
 
 /*Media queris para la compativilidad de la web con ordenadores tablets y moviles*/
@@ -64,6 +34,11 @@ nav div{
         "my-aside my-main my-main"
         "my-footer my-footer my-footer";
     }
+    header{
+        font-size: 40px;
+        height: 100px;
+        justify-content: center;
+    }
     
     nav{
         border-bottom: var(--borde);
@@ -71,7 +46,16 @@ nav div{
     nav div {        
         display: flex;
         flex-direction: column;
-    } 
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p{
+        font-size: 18px;
+    }
 }
 
 /* tablet */
@@ -98,6 +82,15 @@ nav div{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p{
+        font-size: 18px;
     }
 }
 
@@ -126,8 +119,47 @@ nav div{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        font-size: 0,8rem;
+        font-size: 0,6rem;
     }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+
+/*Configuracion del header*/
+header{
+    background-color: var(--fondo-azul);
+    color: var(--letra-blanca);
+    text-align: center;
+    grid-area: my-header;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    border-bottom: black 1px solid;
+}
+
+/*Configuracion del menu principal*/
+nav{
+    background-color: var(--fondo-azul-menu);
+    grid-area: my-aside;
+    border-right: var(--borde);
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav div{
+    color: black;
+    text-decoration: none;
+    padding: 5px;
 }
 
 /*Configuracion del main*/
@@ -179,7 +211,23 @@ section{
     max-width: 450px;
     margin: 5px;
 }
-
+/*Configuracion formulario*/
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.corto{
+    width: 25%;
+}
+#msg-contacto{
+    height: 100px;
+    width: 40%;
+}
+.boton-enviar{
+    width: 60px;
+    margin-top: 5px;
+}
 /*Configuracion footer*/
 footer{
     background-color: var(--fondo-gris-oscuro);

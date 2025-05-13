@@ -25,7 +25,6 @@
             <a href="#sobre-mi">Ultimo proyecto</a>
             <a href="#sobre-mi">Sobre mi</a>
             <a href="#proyectos">Proyectos</a>
-            <a href="#otros-proyectos">Otros proyectos</a>
             <a href="#contacto">Contactame</a>
         </div>
     </nav>
@@ -34,9 +33,9 @@
         <!--Seccion de noticias-->
         <section id="noticia">
             <div class="content-noticia">
-                <h1>Mi ultimo proyecto</h1>
+                <h2>Mi ultimo proyecto</h1>
                 <p>Mi ultimo proyecto es sobre crear una pagina web con distintos requisitos tecnicos y de contenido.Este proyecto es el primero de 3 que tengo que entregar a lo largo del curso del master de prometeo.</p>
-                <p>La estructura html tiene que contener <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,<code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>y un <code>&lt;footer&gt;</code></p>
+                <p>La estructura html tiene que contener <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>,<code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>y un <code>&lt;footer&gt;</code>.</p>
                 <p>Con respecto al css aparte de quedar agradable a la vista tiene que tener tanto flexbox como grid aparte de un diseño responsive con media queries.</p>
                 <div>
                     <img src="img/html-css.png"alt="Logo de HTML y CSS">
@@ -89,7 +88,16 @@
         <!--formulario para contactar-->
         <section id="contacto">
             <h2>Contactame</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus culpa corrupti amet perspiciatis alias mollitia porro error quaerat distinctio consequuntur eveniet cum dolorem, tempore blanditiis dolor eius reiciendis accusamus repudiandae?</p>
+            <p>Rellena los siguientes deatos para contactarnos:</p>
+            <form action="">
+                <label for="Nombre">Nombre:</label>
+                <input type="text" class="corto">
+                <label for="mail">email</label>
+                <input type="email" class="corto">
+                <label for="mensage">Mensage:</label>
+                <textarea name="" id="msg-contacto"></textarea>
+                <button class="boton-enviar">Enviar</button>
+            </form>
         </section>
     </main>
     <!--Footer-->
