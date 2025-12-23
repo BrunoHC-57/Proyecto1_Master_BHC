@@ -204,12 +204,26 @@ section{
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.proyecto{
+.mis_proyectos article{
     background-color: var(--fondo-gris-oscuro);
     padding: 1rem;
     border-radius: 5px;
     max-width: 450px;
     margin: 5px;
+    
+}
+.mis_proyectos article p {
+    margin: 1em;
+}
+.mis_proyectos article img {
+    align-items: center;
+    margin: 1em;
+}
+.proyecto1 img {
+    height: 192px;
+}
+.proyecto3 img {
+    height: 192px;
 }
 /*Configuracion formulario*/
 form{
